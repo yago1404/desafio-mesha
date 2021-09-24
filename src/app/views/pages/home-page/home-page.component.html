@@ -1,0 +1,20 @@
+<section>
+  <div class="presentation">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/41hzbXlmykL.png" alt="Weather igm">
+    <h1>Weather to music - by Yago Taveiros</h1>
+  </div>
+  <div class="main-content">
+    <h2>Ache sua playlist ideal</h2>
+    <p>Basta digitar sua cidade ou seu localização (com a latitude e longitude) que buscamos o clima da sua região e
+      retornamos a melhor playlist para o dia de hoje</p>
+    <div class="form">
+        <h3>Vamos começar</h3>
+        <input type="text" name="cityName" placeholder="Nome da cidade" [(ngModel)]="cityName">
+        <input type="number" name="cityLat" placeholder="Latitude (Opcional)" [(ngModel)]="cityLat">
+        <input type="number" name="cityLong" placeholder="Longitude (Opcional)" [(ngModel)]="cityLong">
+        <p class="validate-message" *ngIf="!isValid">Preencha o nome da cidade ou sua localização (Latitudo e Longitudo)</p>
+        <button class="search-playlist-btn" (click)="getWeather()" *ngIf="!isLoading">Achar Playlist</button>
+        <button class="load-btn" *ngIf="isLoading">Carregando</button>
+    </div>
+  </div>
+</section>

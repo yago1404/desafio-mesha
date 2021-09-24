@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  text-shadow: 1px 1px 100px #000;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 45px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.danger {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+

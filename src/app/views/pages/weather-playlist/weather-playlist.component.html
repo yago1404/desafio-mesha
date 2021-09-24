@@ -1,0 +1,14 @@
+<div class="content">
+  <h1 class="loading-message" *ngIf="musics.length === 0">Carregando...</h1>
+  <h1 *ngIf="musics.length > 0">Sua playlist de músicas {{ idealPlaylistType }}</h1>
+  <input type="text" placeholder="Nome da playlist" *ngIf="musics.length > 0" [(ngModel)]="playlistName">
+  <span class="no-valid-label" *ngIf="!isValid">É preciso criar um nome para sua playlist</span>
+  <div class="musics" *ngFor="let music of musics">
+    <div class="music-card">
+      <img src="{{ music.coverart }}" alt="">
+      <span class="artist-name">{{ music.artist }}</span>
+      <span>{{ music.title }}</span>
+    </div>
+  </div>
+  <button *ngIf="musics.length > 0" (click)="savePlaylist()">Salvar Playlist</button>
+</div>
